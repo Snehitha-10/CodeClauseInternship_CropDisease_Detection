@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://th.bing.com/th/id/OIP.7BUPBTaiV9EG86-6FrEuUwHaFX?pid=ImgDet&rs=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .box {
+            width: 700px;
+            height: 300px;
+            background-color: rgba(38, 38, 38, 0.8); /* Use rgba to set opacity */
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            margin-bottom: 300px;
+            color: white;
+
+            .title{
+                text-align: center;
+                margin-left: 17px;
+            }
+
+            .form_box{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .butt
+            {
+
+                width:200px;
+                height:50px;
+                border-radius: 20px;
+                background-color:rgb(60, 147, 60);
+                color: white;
+                font-size: larger;
+                border-color:rgb(60, 147, 60);
+
+            }
+            .button1{
+                width:200px;
+                height:40px;
+                background-color:rgb(60, 147, 60);
+                font-size: larger;
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+                border: none;
+                padding: 3px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+
+            }
+            
+            
+
+          
+    
+    </style>
+</head>
+<body>
+    <div class='box'>
+        <div>
+        <h1 class="title">Crop Disease Detection</h1>
+        </div>
+        <div class = 'form_box'>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+           
+            
+              <input type="file" name="file_input" accept="image/*" class="file_in">
+              
+              <div><input type="submit" class="button1" value="Predict Disease"></div>
+        </form>
+        </div>
+
+
+    </div>
+</body>
+</html>

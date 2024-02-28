@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Prediction Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://th.bing.com/th/id/OIP.7BUPBTaiV9EG86-6FrEuUwHaFX?pid=ImgDet&rs=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color:white;
+        }
+
+        .box{
+            padding-top:50px;
+        }
+
+        .title{
+            font-size:100px;
+        }
+        .pc{
+            text-align:center;
+            font-size:40px;
+            font-weight:240;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class='box'>
+    <h1 class='title'>Leaf Disease Detection</h1>
+        <p><b class="pc">Predicted Disease: {{ prediction['class'] }}</b></p>
+        <b class="pc">Confidence: {{ prediction['confidence'] }}</b>
+</div>
+</body>
+</html>
